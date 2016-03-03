@@ -18,11 +18,41 @@ In this lesson we will look at the CSS Box Model. We will discover how to determ
 
 ### Characteristics Of A Box
 
-All elements can be thought of as boxes on the screen in that they can have a height, a width, spacing within, and spacing outside of them. Let's familiarize ourselves with the CSS properties neccesary to add borders, and spacing to our elements.
+All elements can be thought of as boxes on the screen in that they can have a height, a width, spacing within, and spacing outside of them. Furthermore, we can set these spacing properties independently on all four sides of our element. Let's start by familiarizing ourselves with the CSS properties neccesary to add borders, and spacing to our elements. The box model is made of the following CSS properties:
 
 #### Margin
 
-Margin is the spacing outside of an element. 
+Margin is the spacing outside of an element. It pushes one element away from the other, creating an empty space between. Margin can be set in (px) pixels, (em) ems, or (%) percents. We can specify margin independently on all four sides of an element using the properties `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, and also using the shorthand property `margin` while providing multiple values to determine which side each value will effect.
+
+```css
+
+```
+
+#### Padding
+
+Padding is the spacing inside of an element. It pushes content wihtin the element away from the elements outer walls. Padding can be set in (px) pixels, (em) ems, or (%) percents. We can specify padding independently on all four sides of an element using the properties `padding-top`, `padding-right`, `padding-bottom`, `padding-left`, and also using the shorthand property `padding` while providing multiple values to determine which side each value will effect.
+
+```css
+
+```
+
+#### Border
+
+Border creates a line against the edge of an element. It marks directly upon the elements outer walls. Border has three distinct properties that can be set upon it: `border-size`, `border-style`, and `border-color`. We can also use the shorthand property `border` to set all three values in this one property.  We can specify border independently on all four sides of an element using the properties `border-top`, `border-right`, `border-bottom`, `border-left`.
+
+Border size can be set in (px) pixels, (em) ems, or (%) percents.
+
+Border style can be set to: solid, dashed, dotted, ...
+
+Border color can be set by color name, hexidecimal, rgb, rgba, hsl, or hsla.
+
+```css
+
+```
+
+### IE Box Model vs W3C Box Model
+
+...
 
 ## Summary
 
