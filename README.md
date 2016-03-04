@@ -196,21 +196,84 @@ All of the properties above (border, border-size, border-style, border-color) ca
 
 ### IE Box Model vs W3C Box Model
 
-...
+Microsoft the maker of Windows OS and the Internet Explorer Browser have always had their own opinion and their own way of doing things. One example of this is their own unique interpretation of the box model. As web developers it's important we understand the difference between the two available box models: the IE box model and the W3C box model.
+
+#### W3C Box Model
+
+The W3C, a standards commitee that oversees the spec for HTML and CSS specifies their own box model which has been adopted by Safari, Opera, Chrome, and FireFox browsers. It dictates that when we set a `width` or `height` property in CSS we are setting the size of the content area, and that any padding, border, or margin is an extra amount that we need to add on to the width or height. For example if we set the width of a div to 100px, and also give it 20px of padding, and 1px of border.
+
+```css
+div {
+  width: 100px;
+  padding: 20px;
+  border: 1px solid black;
+}
+```
+
+The real amount of space the element takes up is 100px width + 40px (20 on each side) + 2px border (1px each side) = 142px wide. This is the case for all browsers except for (IE) Internet Explorer. There is 100px of space for the content inside the element, but the element itself is 142px wide.
+
+Total width in all browsers (except IE) = 142px
+
+Total content area width in all browsers (except IE) = 100px
+
+#### IE Box Model
+
+Microsofts box model is built differently. When we set a width and padding and border on our element it is automatically included in the width. So using the same previous example if we set the width of a div to 100px, and also give it 20px of padding, and 1px of border.
+
+```css
+div {
+  width: 100px;
+  padding: 20px;
+  border: 1px solid black;
+}
+```
+
+IE, includes the padding and border in its measured width and thus the total measurement is still 100px. However to calculate the amount of space insid ethe element for content we must subtract the border and padding, so: 100px width - 40px padding (20px on each side) - 2px border (1px on each side) = 58px of space for the content area within the element.
+
+Total width in all browsers (except IE) = 100px
+
+Total content area width in all browsers (except IE) = 58px
+
+### Margin Not Includded
+
+Please note that neither box model includes margin in their width and height, so when calculating how much space an element takes up in relationship to other elements, it is important to factor in the margin as taking up its own space independent of the total width of the element.
 
 ### Solutions For Uniform Box Measurements
 
-...
+You can imagine seeing our elements as two different sizes in different browsers is enough to give anyone a headache. Fortunately, we can now use the CSS3 `box-sizing` property to force browsers to use either the IE box model or the W3C box model. To use the IE box model we simply set elements `box-sizing: border-box;` or to set elements to W3C box model we use `box-sizing: content-box`. We can conveniently use the universal selector to set this for all elements like so:
+
+```css
+* {
+  box-sizing: border-box; /* IE */
+}
+```
+
+or
+
+```css
+* {
+  box-sizing: border-box; /* W3C */
+}
+```
 
 ## Summary
 
-- ...
+- Margin, border, padding, and content area combine to makeup the box model.
+- Margin is the spacing outside of elements.
+- Padding is the spacing inside of elements.
+- Border is a stroke at the edge of elements.
+- Margin, border, and padding have shorthand properties where we can define different values for each side of the element.
+- There are two distinct and different box models: W3C and IE.
+- The W3C Box Model does not include padding and border in its total width or height.
+- The IE Box Model does include padding and border in its total width or height.
+- Neither Box model includes margin in their total width or height.
+- We can use the `box-sizing` property to set all browsers to use one or the other box model. To use IE set the `border-box` value and to use W3C set the `content-box` value. 
 
 ## Resources
 
 - [Presentation Slides](https://docs.google.com/presentation/d/1UTUWDczUiDZ6byuhyHv0L3zJXQjdlnZheZXhRVLOL3Q/edit?usp=sharing)
-- [MDN - Introduction CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - [MDN - CSS - Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 - [MDN - CSS - Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 - [MDN - CSS - Border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+- [MDN - Introduction CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - [Box Model - Code Example](http://jsfiddle.net/flatiron_school/jtFgz/)
