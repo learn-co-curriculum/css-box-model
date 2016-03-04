@@ -234,7 +234,7 @@ Total width in all browsers (except IE) = 100px
 
 Total content area width in all browsers (except IE) = 58px
 
-### Margin Not Includded
+### Margin Not Included
 
 Please note that neither box model includes margin in their width and height, so when calculating how much space an element takes up in relationship to other elements, it is important to factor in the margin as taking up its own space independent of the total width of the element.
 
