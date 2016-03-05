@@ -272,8 +272,8 @@ or
 ## Resources
 
 - [Presentation Slides](https://docs.google.com/presentation/d/1UTUWDczUiDZ6byuhyHv0L3zJXQjdlnZheZXhRVLOL3Q/edit?usp=sharing)
+- [Box Model - Code Example](http://jsfiddle.net/flatiron_school/jtFgz/)
 - [MDN - CSS - Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 - [MDN - CSS - Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 - [MDN - CSS - Border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 - [MDN - Introduction CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [Box Model - Code Example](http://jsfiddle.net/flatiron_school/jtFgz/)
