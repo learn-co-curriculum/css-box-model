@@ -94,7 +94,7 @@ div {
 
 #### Padding
 
-Padding is the spacing inside of an element. It pushes content wihtin the element away from the elements outer walls. Padding can be set in (px) pixels, (em) ems, or (%) percents. We can specify padding independently on all four sides of an element using the properties `padding-top`, `padding-right`, `padding-bottom`, `padding-left`, and also using the shorthand property `padding` while providing multiple values to determine which side each value will effect. The order of the values for the `padding` shorthand property follow the same rules as for margin listed above.
+Padding is the spacing inside of an element. It pushes content within the element away from the element's outer walls. Padding can be set in (px) pixels, (em) ems, or (%) percents. We can specify padding independently on all four sides of an element using the properties `padding-top`, `padding-right`, `padding-bottom`, `padding-left`, and also using the shorthand property `padding` while providing multiple values to determine which side each value will effect. The order of the values for the `padding` shorthand property follow the same rules as for margin listed above.
 
 Setting one value will apply a uniform amount of padding on all insides of the selected element.
 
@@ -166,7 +166,7 @@ div {
 
 #### Border
 
-Border creates a line against the edge of an element. It marks directly upon the elements outer walls. Border has three distinct properties that can be set upon it: `border-size`, `border-style`, and `border-color`. We can also use the shorthand property `border` to set all three values in this one property.  We can specify border independently on all four sides of an element using the properties `border-top`, `border-right`, `border-bottom`, `border-left`.
+Border creates a line against the edge of an element. It marks directly upon the element's outer walls. Border has three distinct properties that can be set upon it: `border-size`, `border-style`, and `border-color`. We can also use the shorthand property `border` to set all three values in this one property.  We can specify border independently on all four sides of an element using the properties `border-top`, `border-right`, `border-bottom`, `border-left`.
 
 Border size can be set in (px) pixels, (em) ems, or (%) percents.
 
@@ -180,7 +180,7 @@ Border style can be set to: solid, dashed, dotted, ...
 border-style: none | hidden | solid | dashed | dotted | double | groove | ridge | inset | outset
 ```
 
-Border color can be set by color name, hexidecimal, rgb, rgba, hsl, or hsla.
+Border color can be set by color name, hexadecimal, rgb, rgba, hsl, or hsla.
 
 ```css
 border-color: red | #f00 | rgb(255,0,0) | rgba(255,0,0,1) | hsl(0,100%,50%) | hsla(0,100%,50%,1)
@@ -196,11 +196,11 @@ All of the properties above (border, border-size, border-style, border-color) ca
 
 ### IE Box Model vs W3C Box Model
 
-Microsoft the maker of Windows OS and the Internet Explorer Browser have always had their own opinion and their own way of doing things. One example of this is their own unique interpretation of the box model. As web developers it's important we understand the difference between the two available box models: the IE box model and the W3C box model.
+Microsoft, the maker of Windows OS and the Internet Explorer Browser, have always had their own opinion and their own way of doing things. One example of this is their own unique interpretation of the box model. As web developers, it's important we understand the difference between the two available box models: the IE box model and the W3C box model.
 
 #### W3C Box Model
 
-The W3C, a standards commitee that oversees the spec for HTML and CSS specifies their own box model which has been adopted by Safari, Opera, Chrome, and FireFox browsers. It dictates that when we set a `width` or `height` property in CSS we are setting the size of the content area, and that any padding, border, or margin is an extra amount that we need to add on to the width or height. For example if we set the width of a div to 100px, and also give it 20px of padding, and 1px of border.
+The W3C, a standards commitee that oversees the spec for HTML and CSS, specifies their own box model which has been adopted by Safari, Opera, Chrome, and FireFox browsers. It dictates that when we set a `width` or `height` property in CSS we are setting the size of the content area, and that any padding, border, or margin is an extra amount that we need to add on to the width or height. For example if we set the width of a div to 100px, and also give it 20px of padding, and 1px of border.
 
 ```css
 div {
@@ -277,3 +277,5 @@ or
 - [MDN - CSS - Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 - [MDN - CSS - Border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 - [MDN - Introduction CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/css-box-model'>Box Model</a> on Learn.co and start learning to code for free.</p>
